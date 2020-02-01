@@ -1,0 +1,34 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>INSS</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 ">
+        <ul>
+          <li><a (click)="onSelect('aps')">app-aps</a></li>
+          <li><a (click)="onSelect('indprev')">app-indicadores-previdencia</a></li>
+          <li><a (click)="onSelect('indunidade')">app-indicadores-unidade-atendimento</a></li>
+          <li><a (click)="onSelect('servicosocial')">app-servico-social-por-uf</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <app-aps *ngIf=isApsSelected()></app-aps>
+        <app-indicadores-previdencia *ngIf=isIndPrevSelected()></app-indicadores-previdencia>
+        <app-indicadores-unidade-atendimento *ngIf=isIndUnidadeSelected()></app-indicadores-unidade-atendimento>
+        <app-servico-social-por-uf *ngIf=isServicoSocialSelected()></app-servico-social-por-uf>
+      </div>
+    </div>   
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="onClick()">Reload</button>
+      </div>
+    </div>
+</div>

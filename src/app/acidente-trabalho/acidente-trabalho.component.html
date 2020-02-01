@@ -1,0 +1,36 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Acidente de Trabalho</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 ">
+        <ul>
+          <li><a (click)="onSelect('atividade')">Por Atividade</a></li>
+          <li><a (click)="onSelect('cid')">Por CID</a></li>
+          <li><a (click)="onSelect('idade')">Por Idade</a></li>
+          <li><a (click)="onSelect('mes')">Por Mês</a></li>
+          <li><a (click)="onSelect('uf')">Por UF</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <app-por-atividade *ngIf=isAtividadeSelected()></app-por-atividade>
+        <app-por-cid *ngIf=isCidSelected()></app-por-cid>
+        <app-por-idade *ngIf=isIdadeSelected()></app-por-idade>
+        <app-por-mes *ngIf=isMesSelected()></app-por-mes>
+        <app-por-uf *ngIf=isUfSelected()></app-por-uf>
+      </div>
+    </div>   
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="onClick()">Reload</button>
+      </div>
+    </div>
+</div>

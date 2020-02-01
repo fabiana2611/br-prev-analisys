@@ -1,0 +1,31 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Aposentadoria</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 ">
+        <ul>
+          <li><a (click)="onSelect('servico')">Por Anos de Serviço</a></li>
+          <li><a (click)="onSelect('contribuicao')">Por Contribuição</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <app-por-anos-servico  *ngIf=isServicoSelected()></app-por-anos-servico>
+        <app-por-contribuicao  *ngIf=isContribuicaoSelected()></app-por-contribuicao>
+      </div>
+    </div>   
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <button class="btn btn-primary" (click)="onClick()">Reload</button>
+      </div>
+    </div>
+</div>

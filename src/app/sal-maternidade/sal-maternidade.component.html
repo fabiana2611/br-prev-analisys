@@ -1,0 +1,28 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Salário Maternidade</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 ">
+        <ul>
+          <li><a (click)="onSelect('empresauf')">app-por-empresas-uf</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <app-por-empresas-uf *ngIf=isEmpresaUfSelected()></app-por-empresas-uf>
+      </div>
+    </div>   
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="onClick()">Reload</button>
+      </div>
+    </div>
+</div>

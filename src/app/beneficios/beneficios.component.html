@@ -1,0 +1,33 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Benefícios</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 ">
+        <ul>
+          <li><a (click)="onSelect('ativos')">Ativos</a></li>
+          <li><a (click)="onSelect('concedidos')">Concedidos</a></li>
+          <li><a (click)="onSelect('historico')">Histórico</a></li>
+          <li><a (click)="onSelect('incapacidade')">Por Incapacidade</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <app-ativos *ngIf=isAtivosSelected()></app-ativos>
+        <app-concedidos *ngIf=isConcedidosSelected()></app-concedidos>
+        <app-historico *ngIf=isHistoricoSelected()></app-historico>
+        <app-por-incapacidade *ngIf=isIncapacidadeSelected()></app-por-incapacidade>
+      </div>
+    </div>  
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="onClick()">Reload</button>
+      </div>
+    </div>
+</div>
