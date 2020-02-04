@@ -1,56 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BeneficiosComponent } from './beneficios/beneficios.component';
-import { AcidenteTrabalhoComponent } from './acidente-trabalho/acidente-trabalho.component';
-import { AposentadoriaComponent } from './aposentadoria/aposentadoria.component';
-import { SalMaternidadeComponent } from './sal-maternidade/sal-maternidade.component';
-import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
-import { InssComponent } from './inss/inss.component';
-import { ConcedidosComponent } from './beneficios/concedidos/concedidos.component';
-import { AtivosComponent } from './beneficios/ativos/ativos.component';
-import { PorIncapacidadeComponent } from './beneficios/por-incapacidade/por-incapacidade.component';
-import { HistoricoComponent } from './beneficios/historico/historico.component';
-import { PorAtividadeComponent } from './acidente-trabalho/por-atividade/por-atividade.component';
-import { PorMesComponent } from './acidente-trabalho/por-mes/por-mes.component';
-import { PorIdadeComponent } from './acidente-trabalho/por-idade/por-idade.component';
-import { PorCidComponent } from './acidente-trabalho/por-cid/por-cid.component';
-import { PorUfComponent } from './acidente-trabalho/por-uf/por-uf.component';
-import { PorAnosServicoComponent } from './aposentadoria/por-anos-servico/por-anos-servico.component';
-import { PorContribuicaoComponent } from './aposentadoria/por-contribuicao/por-contribuicao.component';
-import { PorEmpresasUfComponent } from './sal-maternidade/por-empresas-uf/por-empresas-uf.component';
-import { EstatisticaPorUfComponent } from './contribuicao/estatistica-por-uf/estatistica-por-uf.component';
-import { EstatisticaPorIdadeComponent } from './contribuicao/estatistica-por-idade/estatistica-por-idade.component';
-import { RecolhimentoEmpresaComponent } from './contribuicao/recolhimento-empresa/recolhimento-empresa.component';
-import { OutrosContribuintesComponent } from './contribuicao/outros-contribuintes/outros-contribuintes.component';
-import { HistoricoMensalArrecadacaoComponent } from './contribuicao/historico-mensal-arrecadacao/historico-mensal-arrecadacao.component';
-import { ArrecadacaoMensalPorUfComponent } from './contribuicao/arrecadacao-mensal-por-uf/arrecadacao-mensal-por-uf.component';
-import { ArrecadacaoPorFonteReceitaComponent } from './contribuicao/arrecadacao-por-fonte-receita/arrecadacao-por-fonte-receita.component';
-import { ApsComponent } from './inss/aps/aps.component';
-import { IndicadoresPrevidenciaComponent } from './inss/indicadores-previdencia/indicadores-previdencia.component';
-import { IndicadoresUnidadeAtendimentoComponent } from './inss/indicadores-unidade-atendimento/indicadores-unidade-atendimento.component';
-import { ServicoSocialPorUfComponent } from './inss/servico-social-por-uf/servico-social-por-uf.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './core/header/header.component';
+import { BeneficiosComponent } from './modules/beneficios/beneficios.component';
+import { AcidenteTrabalhoComponent } from './modules/acidente-trabalho/acidente-trabalho.component';
+import { AposentadoriaComponent } from './modules/aposentadoria/aposentadoria.component';
+import { SalMaternidadeComponent } from './modules/sal-maternidade/sal-maternidade.component';
+import { ContribuicaoComponent } from './modules/contribuicao/contribuicao.component';
+import { InssComponent } from './modules/inss/inss.component';
+import { ConcedidosComponent } from './modules/beneficios/concedidos/concedidos.component';
+import { AtivosComponent } from './modules/beneficios/ativos/ativos.component';
+import { PorIncapacidadeComponent } from './modules/beneficios/por-incapacidade/por-incapacidade.component';
+import { HistoricoComponent } from './modules/beneficios/historico/historico.component';
+import { PorAtividadeComponent } from './modules/acidente-trabalho/por-atividade/por-atividade.component';
+import { PorMesComponent } from './modules/acidente-trabalho/por-mes/por-mes.component';
+import { PorIdadeComponent } from './modules/acidente-trabalho/por-idade/por-idade.component';
+import { PorCidComponent } from './modules/acidente-trabalho/por-cid/por-cid.component';
+import { PorUfComponent } from './modules/acidente-trabalho/por-uf/por-uf.component';
+import { PorAnosServicoComponent } from './modules/aposentadoria/por-anos-servico/por-anos-servico.component';
+import { PorContribuicaoComponent } from './modules/aposentadoria/por-contribuicao/por-contribuicao.component';
+import { PorEmpresasUfComponent } from './modules/sal-maternidade/por-empresas-uf/por-empresas-uf.component';
+import { EstatisticaPorUfComponent } from './modules/contribuicao/estatistica-por-uf/estatistica-por-uf.component';
+import { EstatisticaPorIdadeComponent } from './modules/contribuicao/estatistica-por-idade/estatistica-por-idade.component';
+import { RecolhimentoEmpresaComponent } from './modules/contribuicao/recolhimento-empresa/recolhimento-empresa.component';
+import { OutrosContribuintesComponent } from './modules/contribuicao/outros-contribuintes/outros-contribuintes.component';
+import { HistoricoMensalArrecadacaoComponent } from './modules/contribuicao/historico-mensal-arrecadacao/historico-mensal-arrecadacao.component';
+import { ArrecadacaoMensalPorUfComponent } from './modules/contribuicao/arrecadacao-mensal-por-uf/arrecadacao-mensal-por-uf.component';
+import { ArrecadacaoPorFonteReceitaComponent } from './modules/contribuicao/arrecadacao-por-fonte-receita/arrecadacao-por-fonte-receita.component';
+import { ApsComponent } from './modules/inss/aps/aps.component';
+import { IndicadoresPrevidenciaComponent } from './modules/inss/indicadores-previdencia/indicadores-previdencia.component';
+import { IndicadoresUnidadeAtendimentoComponent } from './modules/inss/indicadores-unidade-atendimento/indicadores-unidade-atendimento.component';
+import { ServicoSocialPorUfComponent } from './modules/inss/servico-social-por-uf/servico-social-por-uf.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'beneficios', component: BeneficiosComponent },
-  { path: 'acidente-trabalho', component: AcidenteTrabalhoComponent },
-  { path: 'aposentadoria', component: AposentadoriaComponent },
-  { path: 'contribuicao', component: ContribuicaoComponent },
-  { path: 'inss', component: InssComponent },
-  { path: 'sal-maternidade', component: SalMaternidadeComponent }
-  //{ path: '**', redirectTo: '/home' },
-  //{ path: 'beneficios/:nb', component: BeneficiosComponent }
-  //{ path: 'beneficios', component: BeneficiosComponent, children: [
-  //  {path: ':nb/:name', component: BeneficiosComponent}
-  //] }
-  
-];
 
 @NgModule({
   declarations: [
@@ -89,7 +73,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
