@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenDataBrService } from 'src/app/core/http/open-data-br.service';
 
 @Component({
   selector: 'app-concedidos',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConcedidosComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private openDataService: OpenDataBrService) { }
 
   ngOnInit() {
+    this.openDataService.transformDataBenConcedidoUfEspecie();
   }
 
 }

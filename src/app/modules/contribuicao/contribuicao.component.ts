@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContribuicaoComponent implements OnInit {
 
-  private selectedItem:string = 'arrecadacaomensal';
+  private selectedItem:string = 'arrecadacaofontereceita';
 
   constructor() { }
 

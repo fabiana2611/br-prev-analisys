@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeneficiosComponent implements OnInit {
   
-  private selectedItem:string = 'ativos';
+  private selectedItem:string = 'concedidos';
 
   constructor() { }
 

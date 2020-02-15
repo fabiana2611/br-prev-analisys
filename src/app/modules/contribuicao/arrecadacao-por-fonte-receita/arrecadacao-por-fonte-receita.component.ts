@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenDataBrService } from 'src/app/core/http/open-data-br.service';
 
 @Component({
   selector: 'app-arrecadacao-por-fonte-receita',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArrecadacaoPorFonteReceitaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private openDataService: OpenDataBrService) { }
 
   ngOnInit() {
+    this.openDataService.transformDataAcidenteTrabalhoPorUF();
   }
 
 }

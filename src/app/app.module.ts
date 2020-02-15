@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -34,6 +35,7 @@ import { IndicadoresUnidadeAtendimentoComponent } from './modules/inss/indicador
 import { ServicoSocialPorUfComponent } from './modules/inss/servico-social-por-uf/servico-social-por-uf.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -73,7 +75,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
