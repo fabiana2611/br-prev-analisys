@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { OpenDataBrService } from 'src/app/core/http/open-data-br.service';
+import { AcidenteService } from '../acidente.service';
 
 @Component({
   selector: 'app-por-uf',
   templateUrl: './por-uf.component.html',
-  styleUrls: ['./por-uf.component.css']
+  styleUrls: ['./por-uf.component.css'],
+  providers: [AcidenteService]
 })
 export class PorUfComponent implements OnInit {
 
-  constructor(private openDataService: OpenDataBrService) { }
+  constructor(private acidenteService: AcidenteService) { }
 
   ngOnInit() {
-    this.openDataService.transformDataAcidenteTrabalhoPorUF();
+    this.acidenteService.fetchAcidenteTrabalhoPorUF();
   }
 
 }
